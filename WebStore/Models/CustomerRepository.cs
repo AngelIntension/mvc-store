@@ -34,9 +34,10 @@ namespace WebStore.Models
             return context.Customers.Where(c => c.Id == id).FirstOrDefault();
         }
 
-        public void Remove(Customer entity)
+        public void Remove(Customer customer)
         {
-            throw new NotImplementedException();
+            context.Customers.Remove(customer);
+            context.SaveChanges();
         }
     }
 }
