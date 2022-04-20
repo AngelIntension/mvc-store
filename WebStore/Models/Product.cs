@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace WebStore.Models
+﻿namespace WebStore.Models
 {
     public class Product
     {
