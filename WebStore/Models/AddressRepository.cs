@@ -34,9 +34,10 @@ namespace WebStore.Models
             return context.Addresses.Find(id);
         }
 
-        public void Remove(Address entity)
+        public void Remove(Address address)
         {
-            throw new NotImplementedException();
+            context.Addresses.Remove(address);
+            context.SaveChanges();
         }
     }
 }
