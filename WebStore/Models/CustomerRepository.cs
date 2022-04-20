@@ -26,12 +26,12 @@ namespace WebStore.Models
 
         public IEnumerable<Customer> FindBy(Func<Customer, bool> predicate)
         {
-            return context.Customers.Where(predicate);
+            return context.Customers.Where(predicate).ToList();
         }
 
         public Customer FindById(int id)
         {
-            return context.Customers.Where(c => c.Id == id).FirstOrDefault();
+            return context.Customers.Find(id);
         }
 
         public void Remove(Customer customer)

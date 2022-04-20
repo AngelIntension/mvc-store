@@ -20,7 +20,7 @@ namespace WebStore.Models
 
         public Product FindById(int id)
         {
-            return context.Products.Where(p => p.Id == id).FirstOrDefault();
+            return context.Products.Find(id);
         }
 
         public void Add(Product product)
@@ -37,7 +37,7 @@ namespace WebStore.Models
 
         public IEnumerable<Product> FindBy(Func<Product, bool> predicate)
         {
-            return context.Products.Where(predicate);
+            return context.Products.Where(predicate).ToList();
         }
     }
 }
