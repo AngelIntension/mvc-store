@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WebStore.Models
 {
@@ -20,7 +21,7 @@ namespace WebStore.Models
 
         public IEnumerable<Customer> FindAll()
         {
-            throw new NotImplementedException();
+            return context.Customers.ToList();
         }
 
         public IEnumerable<Customer> FindBy(Func<Customer, bool> predicate)
