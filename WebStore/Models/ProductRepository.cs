@@ -37,7 +37,7 @@ namespace WebStore.Models
 
         public IEnumerable<Product> FindBy(Func<Product, bool> predicate)
         {
-            return context.Products.Where(predicate);
+            return context.Products.Where(predicate).ToList();
         }
     }
 }

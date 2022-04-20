@@ -26,7 +26,7 @@ namespace WebStore.Models
 
         public IEnumerable<Customer> FindBy(Func<Customer, bool> predicate)
         {
-            return context.Customers.Where(predicate);
+            return context.Customers.Where(predicate).ToList();
         }
 
         public Customer FindById(int id)

@@ -64,7 +64,7 @@ namespace WebStoreTests.ProductRepositoryTests
 
             // act
             Func<Product, bool> predicate = p => p.Price == 2.00M;
-            var expected = data.Where(predicate);
+            var expected = data.Where(predicate).ToList();
 
             var uut = new ProductRepository(mockContext.Object);
             var result = uut.FindBy(predicate);
