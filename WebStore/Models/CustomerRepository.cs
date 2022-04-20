@@ -26,7 +26,7 @@ namespace WebStore.Models
 
         public IEnumerable<Customer> FindBy(Func<Customer, bool> predicate)
         {
-            throw new NotImplementedException();
+            return context.Customers.Where(predicate);
         }
 
         public Customer FindById(int id)
