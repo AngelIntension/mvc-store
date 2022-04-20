@@ -31,7 +31,7 @@ namespace WebStore.Models
 
         public Customer FindById(int id)
         {
-            throw new NotImplementedException();
+            return context.Customers.Where(c => c.Id == id).FirstOrDefault();
         }
 
         public void Remove(Customer entity)
