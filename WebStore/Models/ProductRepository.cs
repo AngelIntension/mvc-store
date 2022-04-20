@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace WebStore.Models
 {
-    public class ProductRepository
+    public class ProductRepository : IRepository<Product>
     {
         private StoreDbContext context;
 
