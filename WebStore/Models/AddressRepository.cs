@@ -26,7 +26,7 @@ namespace WebStore.Models
 
         public IEnumerable<Address> FindBy(Func<Address, bool> predicate)
         {
-            throw new NotImplementedException();
+            return context.Addresses.Where(predicate).ToList();
         }
 
         public Address FindById(int id)
