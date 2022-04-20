@@ -31,7 +31,7 @@ namespace WebStore.Models
 
         public Customer FindById(int id)
         {
-            return context.Customers.Where(c => c.Id == id).FirstOrDefault();
+            return context.Customers.Find(id);
         }
 
         public void Remove(Customer customer)
