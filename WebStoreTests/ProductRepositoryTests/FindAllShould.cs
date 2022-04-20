@@ -15,9 +15,9 @@ namespace WebStoreTests.ProductRepositoryTests
             // arrange
             var data = new List<Product>()
             {
-                new Product {Name = "product 1", Description = "some cool new product", Price = 1.00M},
-                new Product {Name = "product 2", Description = "some cool new product", Price = 2.00M},
-                new Product {Name = "product 3", Description = "some cool new product", Price = 3.00M}
+                new Product {Id = 1, Name = "product 1", Description = "some cool new product", Price = 1.00M},
+                new Product {Id = 2, Name = "product 2", Description = "some cool new product", Price = 2.00M},
+                new Product {Id = 3, Name = "product 3", Description = "some cool new product", Price = 3.00M}
             };
 
             var queryableData = data.AsQueryable();

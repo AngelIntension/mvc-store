@@ -16,5 +16,10 @@ namespace WebStore.Models
         {
             return context.Products.ToList();
         }
+
+        public Product FindById(int id)
+        {
+            return context.Products.Where(p => p.Id == id).FirstOrDefault();
+        }
     }
 }
