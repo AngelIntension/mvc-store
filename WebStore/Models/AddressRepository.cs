@@ -31,7 +31,7 @@ namespace WebStore.Models
 
         public Address FindById(int id)
         {
-            throw new NotImplementedException();
+            return context.Addresses.Where(a => a.Id == id).FirstOrDefault();
         }
 
         public void Remove(Address entity)
